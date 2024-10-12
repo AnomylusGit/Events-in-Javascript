@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>A Creepy Story</title>
+<style>
+    body.dark {
+    color: white;
+    background: black;
+    }</style>
+</head>
+<body>
+    <h1>The Basement</h1>
+    <p id="story"> I wanted to find my friend. He was hiding in the basment.</p>
+    <button onclick="goDark ()" >Get in the mood</button>
+    <div class="textEntry">Type your name here, if you dare!: <input type="text" id="name"></div>
+    <button onclick="typeAndScream()">Danger, do not click me!</button>
+    <button onclick="finishTheStory()">Tell me what happened!</button>
+
+    <script>
+        function typeAndScream() {
+            var personName = document.getElementById("name").value;
+            alert("I warned you not to click therefore you shall face the consequences!" + personName);
+        }
+        function goDark() {
+            document.body.className = "dark";
+        }
+        function finishTheStory() {
+            document.getElementById("story").innerHTML = "So I caustiously explored the dusty dungeon and found him inside a knight's old armour!";
+        }
+    </script>
+    
